@@ -1,4 +1,4 @@
-name: Send submodule updates to parent repo
+name: Sync Submodule
 
 on:
   push:
@@ -26,5 +26,5 @@ jobs:
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions - update submodules"
           git add --all
-          git commit -m "Update submodules" || echo "No changes to commit"
+          git commit -m "Sync: Backend Module" || echo "No changes to commit"
           git push
